@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let curso of cursosLista">
+            <app-curso [curso]="curso" (excluirCursoEvent)="onExcluirEvento($event)"></app-curso>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="card p-3">
+        <form action="">
+            <div class="form-group ">
+                <p>Preencha abaixo os campos para inserir um curso.</p>
+                <label class="form-label " for="inputFormCurso">Nome:</label>
+                <input #inputNomeCurso type="text" class="form-control" id="inputFormCurso" placeholder="Digite um nome do curso">
+                <label class="form-label mt-3" for="inputFormCurso">Carga horária:</label>
+                <input #inputCargaCurso type="number" class="form-control" id="inputFormCurso" placeholder="Digite a carga horária do curso">
+                <button type="button" class="btn btn-primary mt-3" (click)="inserirCurso(inputNomeCurso.value,inputCargaCurso.value)">Inserir</button>
+            </div>
+        </form>
+    </div>
+    <app-curso-coll [cursosLista]="cursosLista" (excluirCursoEvent)="onExcluirEvento($event)"></app-curso-coll>
+</div>
